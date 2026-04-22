@@ -1,4 +1,5 @@
 import React from 'react'
+import arcade from '../assets/images/icons/arcade.png'
 
 function SixSection() {
   return (
@@ -10,7 +11,7 @@ function SixSection() {
               <div className="left-side-container">
                 <div className="top-logo-wrapper">
                   <div className="logo-wrapper">
-                    <img src="images/icons/arcade.png" />
+                    <img src={arcade} />
                   </div>
                 </div>
                 <div className="description-wraper white">

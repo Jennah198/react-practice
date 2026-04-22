@@ -1,4 +1,5 @@
 import React from 'react'
+import sixteen from '../assets/images/icons/16.png'
 
 function Fotter() {
   return (
@@ -277,7 +278,7 @@ function Fotter() {
             </div>
             <div className="footer-country  col-sm-12 order-1 col-md-4 order-md-2 text-md-right col-lg-2 order-lg-3">
               <div className="flag-wrapper">
-                <img src="images/icons/16.png" />
+                <img src={sixteen} />
               </div>{' '}
               <div className="footer-country-name">United States</div>
             </div>

@@ -1,4 +1,7 @@
 import React from 'react'
+import banker from '../assets/images/home/banker.png'
+import appletvlogo from '../assets/images/icons/apple-tv-logo.png'
+import watchseries5 from '../assets/images/icons/watch-series5-logo.png'
 
 function FifthSection() {
   return (
@@ -10,11 +13,11 @@ function FifthSection() {
               <div className="left-side-container">
                 <div className="top-logo-wrapper">
                   <div className="logo-wrapper">
-                    <img src="images/icons/apple-tv-logo.png" />
+                    <img src={appletvlogo} />
                   </div>
                 </div>
                 <div className="tvshow-logo-wraper">
-                  <img src="images/home/banker.png" />
+                  <img src={banker} />
                 </div>
                 <div className="watch-more-wrapper">
                   <a href="#">Watch now on the Apple TV App</a>
@@ -25,7 +28,7 @@ function FifthSection() {
               <div className="right-side-container">
                 <div className="top-logo-wrapper">
                   <div className="logo-wrapper">
-                    <img src="images/icons/watch-series5-logo.png" />
+                    <img src={watchseries5} />
                   </div>
                 </div>
                 <div className="description-wraper">
