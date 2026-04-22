@@ -7,6 +7,7 @@ import SecondSection from './components/SecondSection'
 import ThirdSection from './components/ThirdSection'
 import FourthSection from './components/FourthSection'
 import FifthSection from './components/FifthSection'
+import SixSection from './components/SixSection'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <SixSection />
       <Fotter />
     </div>
   )
