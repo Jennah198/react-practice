@@ -4,6 +4,7 @@ import Fotter from './components/Fotter'
 import Alert from './components/Alert'
 import FirstSection from './components/FirstSection'
 import SecondSection from './components/SecondSection'
+import ThirdSection from './components/ThirdSection'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Alert />
       <FirstSection />
       <SecondSection />
+      <ThirdSection />
       <Fotter />
     </div>
   )
