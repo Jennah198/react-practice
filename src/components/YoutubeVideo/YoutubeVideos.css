@@ -1,0 +1,248 @@
+/* YoutubeVideos.css */
+
+/* Container styles */
+.youtube-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    sans-serif;
+}
+
+.youtube-main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: left;
+  border-left: 4px solid #ff0000;
+  padding-left: 1rem;
+}
+
+/* Grid layout for video cards */
+.youtube-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Card styles */
+.youtube-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.youtube-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Thumbnail styles */
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.youtube-card:hover .video-thumbnail img {
+  transform: scale(1.05);
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.youtube-card:hover .play-icon {
+  opacity: 1;
+}
+
+/* Video info styles */
+.video-info {
+  padding: 1rem;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-description {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-publish-date {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.25rem;
+}
+
+.video-channel {
+  font-size: 0.75rem;
+  color: #ff0000;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+  text-align: center;
+  padding: 3rem;
+}
+
+.loading-spinner p {
+  margin-top: 1rem;
+  color: #666;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #ff0000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message styles */
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fee;
+  border-radius: 8px;
+  color: #c33;
+}
+
+/* Small screen sizes (mobile) - 1 video per row */
+@media (max-width: 767px) {
+  .youtube-container {
+    padding: 1rem;
+  }
+
+  .youtube-main-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .youtube-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .video-title {
+    font-size: 0.95rem;
+  }
+
+  .video-description {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .video-info {
+    padding: 0.75rem;
+  }
+}
+
+/* Medium screen sizes (tablet) - 2 videos per row */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .youtube-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .youtube-container {
+    padding: 1.5rem;
+  }
+
+  .video-title {
+    font-size: 0.95rem;
+  }
+
+  .video-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* Large screen sizes (desktop) - 3 videos per row */
+@media (min-width: 1024px) {
+  .youtube-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .youtube-container {
+    padding: 2rem;
+  }
+
+  .video-title {
+    font-size: 1rem;
+  }
+
+  .video-description {
+    font-size: 0.875rem;
+  }
+}
+
+/* Extra large screens (optional) - still 3 videos per row but wider */
+@media (min-width: 1440px) {
+  .youtube-container {
+    max-width: 1400px;
+  }
+
+  .youtube-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}

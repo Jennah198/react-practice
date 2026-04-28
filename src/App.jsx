@@ -8,6 +8,7 @@ import ThirdSection from './components/ThirdSection'
 import FourthSection from './components/FourthSection'
 import FifthSection from './components/FifthSection'
 import SixSection from './components/SixSection'
+import YoutubeVideos from './components/YoutubeVideo/YoutubeVideos'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <FourthSection />
       <FifthSection />
       <SixSection />
+      <YoutubeVideos />
       <Fotter />
     </div>
   )
